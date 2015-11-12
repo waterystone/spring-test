@@ -1,11 +1,12 @@
 package com.adu.spring_test;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
 
 public class HelloTest {
-	private final Log logger = LogFactory.getLog(this.getClass());
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Test
 	public void test() {
