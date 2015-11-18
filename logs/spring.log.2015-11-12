@@ -1,0 +1,177 @@
+2015-11-12 17:38:46.480 DEBUG HelloTest:12 - hello,world!
+2015-11-12 17:51:18.040 DEBUG ResourceTest:15 - resource=class path resource [log4j.xml]
+2015-11-12 18:00:55.040  INFO ResourceTest:14 - resource=class path resource [log4j.xml]
+2015-11-12 18:09:13.198  INFO ResourceTest:28 - buffer=<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="springAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="./logs/spring.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="rootAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="./logs/root.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.adu" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="springAppender" />
+	</logger>
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="rootAppender" />
+	</root>
+
+</log4j:configuration>
+
+2015-11-12 18:09:52.686  INFO ResourceTest:28 - inputStream=java.io.BufferedInputStream@640eac4a,buffer=<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="springAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="./logs/spring.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="rootAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="./logs/root.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.adu" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="springAppender" />
+	</logger>
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="rootAppender" />
+	</root>
+
+</log4j:configuration>
+
+2015-11-12 18:20:36.099  INFO ResourceTest:28 - inputStream=java.io.BufferedInputStream@6335d858,buffer=<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="springAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="./logs/spring.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="rootAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="./logs/root.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.adu" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="springAppender" />
+	</logger>
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="rootAppender" />
+	</root>
+
+</log4j:configuration>
+
+2015-11-12 18:21:37.040 DEBUG ResourceTest:21 - res=true
+2015-11-12 18:21:42.957 DEBUG ResourceTest:21 - res=false
+2015-11-12 18:27:31.712 DEBUG ResourceTest:27 - res=log4j.xml
+2015-11-12 20:15:05.508 DEBUG FileCopyUtilsTest:21 - res=<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="springAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="./logs/spring.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="rootAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="./logs/root.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.adu" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="springAppender" />
+	</logger>
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="rootAppender" />
+	</root>
+
+</log4j:configuration>
+
+2015-11-12 20:23:17.886 DEBUG HelloTest:12 - hello,world!
+2015-11-12 20:27:57.351 DEBUG ResourcePatternResolverTest:20 - log4j.xml
+2015-11-12 20:27:57.356 DEBUG ResourcePatternResolverTest:20 - applicationContext.xml
+2015-11-12 20:27:57.356 DEBUG ResourcePatternResolverTest:20 - log4j.xml
+2015-11-12 20:28:25.536 DEBUG ResourcePatternResolverTest:20 - log4j.xml
+2015-11-12 20:29:33.788 DEBUG ResourcePatternResolverTest:20 - log4j.xml
+2015-11-12 20:29:33.794 DEBUG ResourcePatternResolverTest:20 - log4j2.xml
+2015-11-12 20:29:44.375 DEBUG ResourcePatternResolverTest:20 - log4j.xml
+2015-11-12 20:29:51.645 DEBUG ResourcePatternResolverTest:20 - log4j.xml
+2015-11-12 20:29:51.650 DEBUG ResourcePatternResolverTest:20 - applicationContext.xml
+2015-11-12 20:29:51.650 DEBUG ResourcePatternResolverTest:20 - log4j.xml
+2015-11-12 20:31:01.922 DEBUG PathMatchingResourcePatternResolverTest:20 - log4j.xml,file [C:\Users\yunjie.du\git\spring-test\target\test-classes\log4j.xml]
+2015-11-12 20:31:01.927 DEBUG PathMatchingResourcePatternResolverTest:20 - applicationContext.xml,file [C:\Users\yunjie.du\git\spring-test\target\classes\applicationContext.xml]
+2015-11-12 20:31:01.928 DEBUG PathMatchingResourcePatternResolverTest:20 - log4j.xml,file [C:\Users\yunjie.du\git\spring-test\target\classes\log4j.xml]
+2015-11-12 20:31:26.450 DEBUG PathMatchingResourcePatternResolverTest:20 - file [C:\Users\yunjie.du\git\spring-test\target\test-classes\log4j.xml]
+2015-11-12 20:31:26.454 DEBUG PathMatchingResourcePatternResolverTest:20 - file [C:\Users\yunjie.du\git\spring-test\target\classes\applicationContext.xml]
+2015-11-12 20:31:26.454 DEBUG PathMatchingResourcePatternResolverTest:20 - file [C:\Users\yunjie.du\git\spring-test\target\classes\log4j.xml]
+2015-11-12 20:32:19.680 DEBUG PathMatchingResourcePatternResolverTest:20 - file [C:\Users\yunjie.du\git\spring-test\target\test-classes\log4j.xml]
+2015-11-12 20:32:19.686 DEBUG PathMatchingResourcePatternResolverTest:20 - file [C:\Users\yunjie.du\git\spring-test\target\classes\applicationContext.xml]
+2015-11-12 20:32:19.686 DEBUG PathMatchingResourcePatternResolverTest:20 - file [C:\Users\yunjie.du\git\spring-test\target\classes\log4j.xml]
+2015-11-12 20:32:19.686 DEBUG PathMatchingResourcePatternResolverTest:20 - file [C:\Users\yunjie.du\git\spring-test\target\classes\META-INF\maven\com.adu.spring-test\spring-test\pom.xml]
+2015-11-12 20:53:58.409 DEBUG XmlBeanFactoryTest:21 - res=Person [name=adu, age=23]
+2015-11-12 20:54:51.576 DEBUG XmlBeanFactoryTest:21 - res=Person [name=adu, age=23]
+2015-11-12 20:55:16.385 DEBUG XmlBeanFactoryTest:27 - res=Person [name=adu, age=23]
+2015-11-12 20:56:29.998 DEBUG XmlBeanFactoryTest:33 - res=true
+2015-11-12 21:02:36.970 DEBUG XmlBeanFactoryTest:39 - res=class com.adu.spring_test.model.Person
+2015-11-12 21:03:29.862 DEBUG XmlBeanFactoryTest:45 - res=true

@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -12,7 +11,7 @@ import org.springframework.core.io.Resource;
 import com.adu.spring_test.model.Person;
 
 public class XmlBeanFactoryTest {
-	BeanFactory beanFactory;
+	XmlBeanFactory beanFactory;
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Test
@@ -43,6 +42,14 @@ public class XmlBeanFactoryTest {
 	public void isTypeMatch() {
 		boolean res = beanFactory.isTypeMatch("person", Person.class);
 		logger.debug("res={}", res);
+	}
+
+	@Test
+	public void destroySingleton() {
+		Person person = (Person) beanFactory.getBean("person");
+		logger.debug("person={}", person);
+		beanFactory.destroySingleton("person");
+		logger.debug("end");
 	}
 
 	@Before
