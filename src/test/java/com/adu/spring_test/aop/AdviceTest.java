@@ -1,11 +1,13 @@
 package com.adu.spring_test.aop;
 
+import org.aopalliance.intercept.MethodInterceptor;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.aop.AfterReturningAdvice;
 import org.springframework.aop.BeforeAdvice;
+import org.springframework.aop.ThrowsAdvice;
 import org.springframework.aop.framework.ProxyFactory;
 
 import com.adu.spring_test.cglib.MyService;
@@ -34,6 +36,28 @@ public class AdviceTest {
 
 		proxy = (MyService) factory.getProxy();
 		proxy.hello();
+		logger.debug("~~~~");
+	}
+
+	@Test
+	public void intercept() {
+		MethodInterceptor methodInterceptor = new MyMethodInterceptorAdvice();
+
+		factory.addAdvice(methodInterceptor);
+
+		proxy = (MyService) factory.getProxy();
+		proxy.hello();
+		logger.debug("~~~~");
+	}
+
+	@Test
+	public void afterThrowing() {
+		ThrowsAdvice myThrowsAdvice = new MyThrowsAdvice();
+
+		factory.addAdvice(myThrowsAdvice);
+
+		proxy = (MyService) factory.getProxy();
+		proxy.throwsException();
 		logger.debug("~~~~");
 	}
 

@@ -9,4 +9,8 @@ public class MyService {
 	public void hello() {
 		logger.debug("Hello,World!");
 	}
+
+	public void throwsException() {
+		throw new RuntimeException();
+	}
 }
